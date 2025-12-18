@@ -1,9 +1,9 @@
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-
+from env_config import Config
 
 # Secret Key
-SECRET_KEY = 'django-insecure-8qsoov+8ey(d1y0i-2&qpq#qka9oa4ktr0z0t&#vzbqa&6hjh^'
+SECRET_KEY = Config.SECRET_KEY
 
 
 # Application Definitions
@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     'apps.hotel',
     'apps.payments',
     'apps.touristguide',
-    'apps.travel_destinations'
+    'apps.travel_destinations',
 ]
 
 
@@ -62,6 +62,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 # Web Server Gunicorn Interface
 WSGI_APPLICATION = 'config.wsgi.application'
