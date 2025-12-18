@@ -27,6 +27,9 @@ INSTALLED_APPS = [
     'apps.payments',
     'apps.touristguide',
     'apps.travel_destinations',
+    'apps.ai_assistant',
+    'apps.bookings',
+    'apps.verifications',
 ]
 
 
