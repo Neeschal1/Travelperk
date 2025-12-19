@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 
-def hotel_home(request):
+def ai_assistant_home(request):
     return HttpResponse("""<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -48,7 +48,7 @@ def hotel_home(request):
     </head>
     <body>
         <div class="container">
-            <h1>Hi, this is <span>Hotel's Section!</span></h1>
+            <h1>Hi, this is <span>AI Assistant's Section!</span></h1>
             <footer>
                 © 2025 TravelPerk · Smart Travel Made Simple
             </footer>
