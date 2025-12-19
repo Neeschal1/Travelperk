@@ -1,7 +1,4 @@
-from django.http import HttpResponse
-
-def ai_assistant_home(request):
-    return HttpResponse("""<!DOCTYPE html>
+initial_ui_page = """<!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -48,10 +45,10 @@ def ai_assistant_home(request):
     </head>
     <body>
         <div class="container">
-            <h1>Hi, this is <span>AI Assistant's Section!</span></h1>
+            <h1>Hi, this is <span>Account's Section!</span></h1>
             <footer>
                 © 2025 TravelPerk · Smart Travel Made Simple
             </footer>
         </div>
     </body>
-    </html>""")
+    </html>"""
