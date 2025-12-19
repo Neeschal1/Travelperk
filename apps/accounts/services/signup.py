@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.core.exceptions import ValidationError
 
-def create_user(validated_data):
+def signup_user(validated_data):
     First_Name = validated_data['first_name']
     Last_Name = validated_data['last_name']
     Username = validated_data['username']

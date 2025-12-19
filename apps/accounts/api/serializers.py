@@ -1,8 +1,8 @@
 from django.contrib.auth.models import User
-from ..models import OTPVerification
 from rest_framework import serializers
 from rest_framework.response import Response
-from apps.accounts.services.create import create_user
+from apps.accounts.services.signup import signup_user
+from django.contrib.auth.hashers import check_password
 
 class UserModelSerializers(serializers.ModelSerializer):
     class Meta:
@@ -17,11 +17,10 @@ class UserModelSerializers(serializers.ModelSerializer):
             'is_active' : {'read_only' : True},
             'date_joined' : {'read_only' : True}
         }
-    
     def create(self, validated_data):
-        user = create_user(validated_data)
+        user = signup_user(validated_data)
         return user
-        # return Response{
-        # 'Data' : user,
-        # 'Message' : 'Your request of verifying your account has been sent to the database admin. We will let you know when your account will be verified. Stay patient!'
-    # }
+    
+class LoginSerializers(serializers.Serializer):
+    Email = serializers.EmailField()
+    Password = serializers.CharField()

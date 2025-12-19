@@ -1,6 +1,7 @@
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 from env_config import Config
+from datetime import timedelta
 
 # Secret Key
 SECRET_KEY = Config.SECRET_KEY
@@ -92,6 +93,14 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',},
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',},
 ]
+
+
+# SimpleJWT Setup
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME' : timedelta(minutes=15),
+    'REFRESH_TOKEN_LIFETIME' : timedelta(days=7),
+    'AUTH_HEADER_TYPES' : ('Bearer', )
+}
 
 
 # Internationalizations
