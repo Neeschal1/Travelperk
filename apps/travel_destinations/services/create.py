@@ -1,7 +1,6 @@
 from apps.travel_destinations.models.entities import Desired_Travel_Destination
 
 def create_new_travel_destiny(validated_data):
-    user = validated_data['User']
     dreamcontinent = validated_data['Dream_Continent']
     difficulty = validated_data['Trip_Difficulty']
     interest = validated_data['Interest']
@@ -9,7 +8,7 @@ def create_new_travel_destiny(validated_data):
     accomodations = validated_data['Accomodation']
     
     destiny = Desired_Travel_Destination.objects.create(
-        User = user,
+        # user = user,
         Dream_Continent = dreamcontinent,
         Trip_Difficulty = difficulty,
         Interest = interest,

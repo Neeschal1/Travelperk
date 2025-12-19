@@ -7,8 +7,9 @@ from django.contrib.auth.hashers import check_password
 class UserModelSerializers(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['first_name', 'last_name', 'username', 'email', 'password', 'is_active', 'date_joined']
+        fields = ['id', 'first_name', 'last_name', 'username', 'email', 'password', 'is_active', 'date_joined']
         extra_kwargs = {
+            'id' : {'read_only' : True},
             'first_name' : {'required' : True,},
             'last_name' : {'required' : True,},
             'username' : {'required' : True  },

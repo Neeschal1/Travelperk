@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from .choices import *
 
 class Desired_Travel_Destination(models.Model):
-    User = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     Dream_Continent = models.CharField(max_length=15, choices=CONTINENTS_CHOICE)
     Trip_Difficulty = models.CharField(max_length=15, choices=TRIP_DIFFICULTY)
     Interest = models.CharField(max_length=15, choices=TRAVEL_INTERESTS)
