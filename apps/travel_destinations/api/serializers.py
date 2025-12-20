@@ -17,9 +17,9 @@ class DesiredTravelDestinationSerializers(serializers.ModelSerializer):
         }
         
     def create(self, validated_data):
-        # user = self.context['request'].user
+        user = self.context['request'].user
         
-        desire = create_new_travel_destiny(validated_data)
+        desire = create_new_travel_destiny(validated_data, user)
         return {
             'Message' : f'{desire}'
         }

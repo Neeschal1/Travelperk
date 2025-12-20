@@ -9,6 +9,6 @@ def travel_destinations_home(request):
     return HttpResponse(initial_ui_page)
 
 class DesiredTravelDestinationSerializersListCreateAPIView(generics.ListCreateAPIView):
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset = Desired_Travel_Destination.objects.all()
     serializer_class = DesiredTravelDestinationSerializers
