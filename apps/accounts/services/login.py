@@ -4,13 +4,15 @@ from django.core.exceptions import ValidationError
 from rest_framework.response import Response
 
 def login_user(serializers):
-    email = serializers.validated_data['Email']
+    e_mail = serializers.validated_data['Email']
     password = serializers.validated_data['Password']
         
     try:
-        user = User.objects.filter(email = email).first()
+        user = User.objects.get(email = e_mail)
     except User.DoesNotExist:
         raise ValidationError({'Message':'Signup an account first!'})
         
     if check_password(password, user.password):
         return user
+    
+    raise ValidationError({'Message':'Invalid Credentials!'})

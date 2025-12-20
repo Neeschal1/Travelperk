@@ -3,6 +3,11 @@ from django.contrib.auth.models import User
 from .choices import *
 
 class Desired_Travel_Destination(models.Model):
+    Thumbnail_Image = models.ImageField('image', blank=True, default=None)
+    Description_Image_1 = models.ImageField('image', blank=True, default=None)
+    Description_Image_2 = models.ImageField('image', blank=True, default=None)
+    Description_Image_3 = models.ImageField('image', blank=True, default=None)
+    Description_Image_4 = models.ImageField('image', blank=True, default=None)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     Dream_Continent = models.CharField(max_length=15, choices=CONTINENTS_CHOICE)
     Trip_Difficulty = models.CharField(max_length=15, choices=TRIP_DIFFICULTY)

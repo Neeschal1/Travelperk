@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'apps.ai_assistant',
     'apps.bookings',
     'apps.verifications',
+    'apps.packages',
 ]
 
 
@@ -112,3 +113,7 @@ USE_TZ = True
 
 # Static files
 STATIC_URL = 'static/'
+
+# Media
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'

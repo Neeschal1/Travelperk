@@ -14,7 +14,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 def accounts_home(request):
     return HttpResponse(initial_ui_page)
     
-class UserModelSerializersView(generics.ListCreateAPIView):
+class UserModelSerializersView(generics.CreateAPIView):
     permission_classes = [AllowAny]
     queryset = User.objects.all()
     serializer_class = UserModelSerializers
@@ -33,4 +33,5 @@ class LoginSerializersView(APIView):
                 'Access Token':str(refresh.access_token),
                 'Refresh Token' : str(refresh),
                 'User' : {
-                'Message':f'Hi, {user.username}! You logged in successfully!'}})
+                'Message':f'Hi, {user.first_name}! You logged in successfully!'}})
+            

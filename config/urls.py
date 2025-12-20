@@ -38,6 +38,7 @@ urlpatterns = [
     path('guides/', include('apps.touristguide.api.urls')),
     path('destination/', include('apps.travel_destinations.api.urls')),
     path('verification/', include('apps.verifications.api.urls')),
+    path('packages/', include('apps.packages.api.urls')),
     path('docs/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]
