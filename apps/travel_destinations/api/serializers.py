@@ -16,6 +16,7 @@ class DesiredTravelDestinationSerializers(serializers.ModelSerializer):
             'Interest' : {'required' : True},
             'Trip_Category' : {'required' : True},
             'Accomodation' : {'required' : True},
+            'username' : {'required' : True}
         }
         
     def create(self, validated_data):
