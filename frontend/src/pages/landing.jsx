@@ -7,7 +7,6 @@ const Landing = () => {
   const navigate = useNavigate();
   return (
     <div className="flex flex-col w-full">
-      
       <Hero />
     </div>
   );

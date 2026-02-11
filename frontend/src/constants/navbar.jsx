@@ -17,7 +17,7 @@ const Navbar = () => {
       </div>
 
       {/* Travelperk */}
-      <h1 className="flex mt-5 font-semibold text-white text-2xl">
+      <h1 className="flex mt-3 font-semibold text-white text-2xl">
         travel
         <span className="font-semibold text-2xl text-blue-500">perk</span>
       </h1>
