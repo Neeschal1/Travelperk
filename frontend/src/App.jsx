@@ -9,7 +9,7 @@ import Landing from "./pages/landing";
 const App = () => {
   return (
     <Router>
-      <div className="flex h-screen w-full items-center justify-center">
+      <div className="flex h-screen w-full">
         <Routes>
           <Route path="/" element={ <Landing /> } />
           <Route path="/login" element={ <Login /> } />

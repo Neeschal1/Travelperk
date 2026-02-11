@@ -5,7 +5,7 @@ import Navbar from "../constants/navbar";
 const Landing = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex items-center justify-center w-full">
+    <div className="flex w-full">
       <Navbar />
     </div>
   );
