@@ -6,7 +6,7 @@ const Landing = () => {
   return (
     <div className="flex items-center justify-center">
       <button
-        className="bg-black"
+        className="bg-black text-white"
         onClick={() => {
           navigate("/login");
         }}
@@ -14,13 +14,15 @@ const Landing = () => {
         Login
       </button>
       <button
-        className="bg-black"
+        className="bg-black text-white"
         onClick={() => {
           navigate("/signup");
         }}
       >
         Signup
       </button>
+      <br />
+      <h1 className="text-2xl text-black">Hello Pulu 🔥</h1>
     </div>
   );
 };
