@@ -1,18 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Login from "./pages/login";
+import Signup from "./pages/signup";
+import Landing from "./pages/landing";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div className='flex h-screen w-full items-center justify-center'>
-        <h1 className='font-medium text-amber-400'>Hi, this is travelperk</h1>
+    <Router>
+      <div className="flex h-screen w-full items-center justify-center">
+        <Routes>
+          <Route path="/" element={ <Landing /> } />
+          <Route path="/login" element={ <Login /> } />
+          <Route path="/signup" element={ <Signup /> } />
+        </Routes>
       </div>
-    </>
-  )
-}
+    </Router>
+  );
+};
 
-export default App
+export default App;
