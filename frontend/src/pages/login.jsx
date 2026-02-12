@@ -30,7 +30,8 @@ const Login = () => {
     >
       <div className="bg-white/30 backdrop-blur-sm flex w-full h-full justify-center items-center">
         <div className="bg-white flex flex-row items-center rounded-3xl w-7/12">
-          <div className="flex py-10 px-10 w-full flex-col gap-10">
+          <div className="flex flex-col w-full items-center">
+            <div className="flex py-10 px-10 w-full flex-col gap-10">
             <div className="flex flex-col">
               <h1 className="flex mt-3 font-semibold text-black text-2xl">
                 travel
@@ -96,6 +97,9 @@ const Login = () => {
             <button onClick={handleLogin} className="bg-blue-400 hover:bg-blue-600 hover:cursor-pointer text-white py-3 rounded-full font-regular duration-400">
               Login
             </button>
+          </div>
+          <h1 className="pt-30">New to traveperk? <a href="http://localhost:5173/signup">Signup</a></h1>
+          <p className="mt-5"><strong>Travelperk.</strong> all rights reserved</p>
           </div>
           <img
             className="h-200 w-full relative rounded-br-3xl rounded-tr-3xl"
