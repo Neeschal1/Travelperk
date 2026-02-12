@@ -1,8 +1,19 @@
 import React from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaMagnifyingGlass } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate("/login");
+  };
+
+  const handleSignup = () => {
+    navigate("/signup");
+  };
+
   return (
     <div className="flex flex-row justify-between align-center w-full items-start p-10">
       {/* Call Details */}
@@ -36,10 +47,10 @@ const Navbar = () => {
             placeholder="Search anything..."
           />
         </div>
-        <button className="flex  font-regular border border-blue-400 text-white w-30 justify-center py-4 hover:cursor-pointer hover:bg-blue-600 hover:text-white duration-400 rounded-4xl">
+        <button onClick={handleLogin} className="flex  font-regular border border-blue-400 text-white w-30 justify-center py-4 hover:cursor-pointer hover:bg-blue-600 hover:text-white duration-400 rounded-4xl">
           Login
         </button>
-        <button className="flex bg-blue-400 font-regular text-white w-30 justify-center py-4 hover:cursor-pointer hover:bg-blue-600 duration-400 rounded-4xl">
+        <button onClick={handleSignup} className="flex bg-blue-400 font-regular text-white w-30 justify-center py-4 hover:cursor-pointer hover:bg-blue-600 duration-400 rounded-4xl">
           Signup
         </button>
       </div>
